@@ -1,16 +1,19 @@
-import React, { useContext, useReducer } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import ShowArea from './components/ShowArea'
-import Buttons from './components/Buttons'
-import { Color } from "./components/color";
 
-export default function App() {
+import TabBar from './components/tabbar/TabBar'
+import { TabBarSelected,OrderTabPage } from "./components/models/global";
+
+export default function () {
+  // const [screenHeight, setscreenHeight] = useState(document.documentElement.clientHeight);
+
   return (
     <div>
-      <Color>
-        <ShowArea />
-        <Buttons />
-      </Color>
+        <TabBarSelected>
+          <OrderTabPage>
+            <TabBar />
+          </OrderTabPage>
+        </TabBarSelected>
     </div>
   );
 }
